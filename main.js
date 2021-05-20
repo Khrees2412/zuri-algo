@@ -4,7 +4,9 @@ var convertFahrToCelsius = (num) => {
 		return `[${num}] is not a valid number but a/an array`;
 	}
 	if (typeof num !== "number") {
-		return `${num} is not a valid number but a/an ${typeof num}`;
+		return `${JSON.stringify(
+			num
+		)} is not a valid number but a/an ${typeof num}`;
 	}
 	if (typeof parseInt(num) === "number") {
 		celsius = (num - 32) * (5 / 9);
@@ -14,3 +16,5 @@ var convertFahrToCelsius = (num) => {
 
 const result = convertFahrToCelsius(0);
 console.log(result);
+
+var checkYuGiOh = (n) => {};
